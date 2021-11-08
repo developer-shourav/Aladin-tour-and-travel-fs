@@ -1,0 +1,127 @@
+/* ---------------Google fonts------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =============================================
+         Site titel style
+================================================*/
+.nav-items-style{
+    font-size: 17px;
+    font-weight: bold;
+    color:goldenrod;
+    text-decoration: none;
+    margin: 0px 5px;
+    transition: all .2s ease;
+    padding: 5px;
+}
+
+.nav-items-style:hover{
+       color: white;
+       padding:5px ;
+       background-color:goldenrod ;
+       border-radius: 3px;
+}
+
+
+.banner-container{
+    background-color:#2fd10618 ;
+}
+
+.site-name{
+    font-family: 'Oswald', sans-serif;
+     letter-spacing: 1px;
+    font-weight: 900;
+    color:goldenrod;
+    text-shadow: 1px 1px rgb(46, 46, 46);
+   
+}
+
+/* =============================================
+         header discription style
+================================================*/
+
+.site-discription{
+    color: #444444;
+}
+
+.primery-btn{
+    border:none;
+    color: white;
+    background-color: goldenrod;
+}
+
+
+/*------------- Specility section style ------------- */
+.spicility-section{
+    margin-top: -40px;
+    background-color:#4492ff ;
+}
+
+
+.first-aid-icon{
+      border-left: 1px solid;
+      border-right: 1px solid;
+      color : white ;
+}
+
+/*----------------- feature section style ------------- */
+
+.service-btn{
+    border:2px solid goldenrod;
+    color: goldenrod;
+    background-color: transparent;
+    font-weight: bold;
+    
+}
+
+.service-btn:hover{
+    
+    color: #006aff;
+    background-color: #3f8fff69;
+}
+
+.log-out-btn{
+    margin-left: 5px;
+    border: none ;
+    padding: 4px 10px;
+    border-radius: 5px;
+    background-color:#daa520 ;
+    color: white;
+}
+
+
+/* ==============================================
+               Cards style
+=================================================*/
+.card-style{
+    box-shadow: 1px 1px  4px #9e9d9d;
+    transition: all .5s ease;
+    border-radius: 5px;
+}
+
+
+
+
+.slidr-label{
+      color: #daa520;
+      font-size: 25px; 
+      text-shadow: 1px 1px black;
+      font-weight: bold;
+      
+}
+
+.line-color{
+    color: #f0ac00;
+    text-shadow: 1px 1px black;
+}
+
+
+
+
+.navbar-color{
+          background-color: #212529;
+          
+}

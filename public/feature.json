@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "616e9e664a1eb5f61b950819",
+    "name": "Teeth Cleanings ",
+    "price": "$819",
+    "img": "https://images.squarespace-cdn.com/content/v1/5c34f5f9697a9852b1ed1972/1567619020922-C64DL07M5N1K3SCKZ04U/dental-and-teeth-cleaning-services.jpg"
+  },
+  {
+    "_id": "616e9e669b28cd1be59390cf",
+    "name": "Teeth Whitening",
+    "price": "$730",
+    "img": "https://www.peakcaredental.com/storage/app/media/shutterstock_1564955107.jpg"
+  },
+  {
+    "_id": "616e9e661abf69152e639e43",
+    "name": "Extractions ",
+    "price": "$742",
+    "img": "https://tendercaredental.org/wp-content/uploads/2015/12/extractions.jpg"
+  },
+  {
+    "_id": "616e9e66678dceb7634f8061",
+    "name": "Veneers ",
+    "price": "$886",
+    "img": "https://i.ytimg.com/vi/TWMIAxkCJYw/maxresdefault.jpg"
+  },
+  {
+    "_id": "616e9e665d8a59a513422f45",
+    "name": "Fillings",
+    "price": "$694",
+    "img": "https://dentalasanything.com.au/wp-content/uploads/2017/07/AdobeStock_323419525-1140x640.jpeg"
+  },
+  {
+    "_id": "616e9e664ffdc1276ceb49d8",
+    "name": "Root Canal ",
+    "price": "$805",
+    "img": "https://www.rootcanaldrs.com/storage/app/media/root-canal-treatment2.jpg"
+  }
+]

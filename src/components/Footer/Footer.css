@@ -1,0 +1,42 @@
+/* ===================================== 
+               footer background
+============================================*/
+.footer-bg{
+    background-color:#212529 ;
+    margin-top: 100px;
+}
+
+.heading-color{
+    color: #daa520;
+}
+
+.socialicon-style{
+    font-size:22px;
+    background-color: goldenrod;
+    padding: 8px 13px;
+    margin-right: 15px;
+    transition: all .3s ease;
+}
+.socialicon-style:hover{
+    color: goldenrod;
+    background-color: transparent;
+    border: 1px solid goldenrod;
+}
+
+.socialicon-style-fb{
+     padding: 8px 18px;
+}
+
+/* ===================================== 
+               footer logo style
+============================================*/
+
+
+/* ===================================== 
+       footer input field style
+============================================*/
+
+
+/* ===================================== 
+       footer button style
+============================================*/
