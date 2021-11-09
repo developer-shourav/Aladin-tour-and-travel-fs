@@ -21,16 +21,16 @@ const Footer = () => {
                          <div className="pt-2">
                             <span className='socialicon-style socialicon-style-fb rounded-circle'><i className="fab fa-facebook-f "></i></span>
                             <span className='socialicon-style rounded-circle' ><i className="fab fa-twitter"></i></span>
-                            <span className='socialicon-style rounded-circle'><i class="fab fa-instagram"></i></span>
+                            <span className='socialicon-style rounded-circle'><i className="fab fa-instagram"></i></span>
                          </div>
                     </div>
 
                     <div className="col-12 col-lg-3 my-lg-0 my-4  ">
                         <h2 className='heading-color fw-bold '>Contact Us</h2>
-                        <p className="text-white"><i class="fas fa-map-marker-alt"></i> Kashimpur, Nawabgonj, Dhaka -1320 <hr /> </p>
-                        <p className="text-white"><i class="fas fa-phone"></i>  +880 5556600 <hr /> </p>
-                        <p className="text-white"><i class="fas fa-mobile-alt"></i> +880 193233880 <hr /> </p>
-                        <p className="text-white"><i class="fas fa-envelope"></i> ShouravRajB.999@gmail.com <hr /> </p>
+                        <span className="text-white"><i className="fas fa-map-marker-alt"></i> Kashimpur, Nawabgonj, Dhaka -1320<hr />  </span>
+                        <span className="text-white"><i className="fas fa-phone"></i>  +880 5556600 <hr /> </span>
+                        <span className="text-white"><i className="fas fa-mobile-alt"></i> +880 193233880  <hr /> </span>
+                        <span className="text-white"><i className="fas fa-envelope"></i> ShouravRajB.999@gmail.com <hr />  </span>
 
                     </div>
 
@@ -53,7 +53,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <br />
-                <p className='text-white'> <hr /></p>
+                <p className='text-white'> </p>
             </div>
            
             

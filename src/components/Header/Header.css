@@ -118,6 +118,17 @@
     text-shadow: 1px 1px black;
 }
 
+.submit-btn{
+    color: #fff;
+    background-color: goldenrod;
+    border: none;
+}
+
+.submit-btn:hover{
+   
+    background-color: rgb(161, 117, 3);
+   
+}
 
 
 
