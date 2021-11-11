@@ -2,7 +2,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AboutUs from './components/AboutUs/AboutUs';
-import AddNewServices from './components/AddNewServices/AddNewServices';
 import AddService from './components/AddService/AddService';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
@@ -45,9 +44,13 @@ function App() {
             <Contact></Contact>
           </Route>
 
+            {/* --------------Add Services---------------- */}
           <Route exact path="/addServices"> 
             <AddService></AddService>
           </Route>
+
+
+
           {/* -----------Login route---------------- */}
           <Route exact path="/login">
             <LogIn></LogIn>

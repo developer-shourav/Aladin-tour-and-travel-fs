@@ -3,9 +3,24 @@ import { useForm } from "react-hook-form";
 
 const AddService = () => {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const { register,
+          handleSubmit,
+          watch,
+           formState: { errors } } = useForm();
 
+    const onSubmit = data =>{
+        fetch("http://localhost:9000/addServices", {
+            method: "POST",
+            headers: {"content-type": "application/json"},
+            body: JSON.stringify(data),
+        })
+        .then(res=> res.json())
+        .then(result => console.log(result));
+
+        
+    };
+
+    
     return (
         <div className="d-flex justify-content-center align-items-center ">
             
@@ -49,7 +64,7 @@ const AddService = () => {
 
 
                     <select {...register("model", { required: true })} className='ps-1 py-2 w-100 my-1 '
-                        placeholder='Price'
+                      
                         type='number'
                         required
                          >

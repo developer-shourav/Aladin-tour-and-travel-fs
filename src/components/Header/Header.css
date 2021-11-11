@@ -71,16 +71,16 @@
 
 .service-btn{
     border:2px solid goldenrod;
-    color: goldenrod;
-    background-color: transparent;
-    font-weight: bold;
+    color: white;
+    background-color: goldenrod;
+    transition: all .3s ease;
+    
     
 }
 
 .service-btn:hover{
-    
-    color: #006aff;
-    background-color: #3f8fff69;
+    transform: scale(1.08);
+    box-shadow: 2px 2px 5px #696969e7;
 }
 
 .log-out-btn{

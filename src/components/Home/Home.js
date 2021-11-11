@@ -7,7 +7,7 @@ const Home = () => {
     const [features, setFeatures] = useState([]);
 
     useEffect(() => {
-        fetch('./feature.json')
+        fetch('http://localhost:9000/tours')
             .then(res => res.json())
             .then(data => setFeatures(data))
 
@@ -134,7 +134,7 @@ const Home = () => {
 
             {/* --------------------Our tours--------------------- */}
             <div className="container my-3 my-lg-5">
-                <h2 className="fw-bold my-2 my-lg-5 py-5 text-center">Our Popular tours</h2>
+                <h2 className="fw-bold my-2 my-lg-5 py-5 text-center">Best Offers</h2>
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                     {
                         features.map(feature => <Featurecart
