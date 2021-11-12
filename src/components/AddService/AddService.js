@@ -5,6 +5,7 @@ const AddService = () => {
 
     const { register,
           handleSubmit,
+          reset,
           watch,
            formState: { errors } } = useForm();
 
@@ -17,7 +18,7 @@ const AddService = () => {
         .then(res=> res.json())
         .then(result => console.log(result));
 
-        
+        reset();
     };
 
     

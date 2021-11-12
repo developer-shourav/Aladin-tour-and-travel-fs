@@ -84,12 +84,20 @@
 }
 
 .log-out-btn{
-    margin-left: 5px;
+    margin-left: 10px;
     border: none ;
-    padding: 4px 10px;
+    padding: 5px;
     border-radius: 5px;
-    background-color:#daa520 ;
+    background-color:#FF3F61 ;
     color: white;
+    font-weight: bold;
+}
+
+.log-out-btn:hover{
+    
+    background-color:#ff3f62de ;
+    color: #fdfdfd;
+   
 }
 
 
@@ -158,4 +166,16 @@
 .navbar-color{
           background-color: #212529;
           
+}
+
+.login-info{
+    color: rgb(68, 67, 67);
+}
+
+
+.profile-photo-style{
+    margin:-7px  5px 0px 8px;
+    width: 50px;
+    border-radius: 50%;
+
 }

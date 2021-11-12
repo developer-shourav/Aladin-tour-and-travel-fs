@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
-
+import useAuth from '../../hooks/useAuth';
 import "./Header.css";
 
 const Header = () => {
@@ -12,6 +11,7 @@ const Header = () => {
         borderRadius:'3px'
     };
 
+    const { user, logOut } = useAuth();
 
 
 
@@ -50,8 +50,22 @@ const Header = () => {
                                     <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/addServices"> Add New Service</NavLink>
                                 </li>
 
+
+                                {user.email && <li className="">
+                                    <span className="fs-6 fw-bold" >  <img className ='profile-photo-style' src={user.photoURL} alt="" /></span>
+                                </li>}
+
+
+
+                                {user.displayName && <li className="">
+                                    <span className="fs-6 fw-bold" style={{ color: "#ff3f62de" }}> <i className="fas fa-user"></i> {user.displayName}</span>
+                                </li>}
+
                                 <li className="nav-item">
-                                    <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/login">Log In</NavLink>
+                                    {
+                                        user.email ?
+                                            <button className="log-out-btn " onClick = {logOut}>Log out</button> : <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/login">Log In </NavLink>
+                                    }
                                 </li>
 
 

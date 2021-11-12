@@ -7,17 +7,19 @@ import Booking from './components/Booking/Booking';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import PrivetRoute from './components/PrivetRoute/PrivetRoute';
 import Home from './components/Home/Home';
 import LogIn from './components/LogIn/LogIn';
 import NotFound from './components/NotFound/NotFound';
 import Tours from './components/Tours/Tours';
+import AuthProvider from './context/AuthProvider';
 
 
 function App() {
   return (
     <div className="">
 
-
+      <AuthProvider>
       <Router>
         {/* -----------Header route---------------- */}
         <Header>
@@ -37,9 +39,9 @@ function App() {
           </Route>
 
           {/* -----------Booking route---------------- */}
-          <Route  path="/booking/:serviceId">
+          <PrivetRoute  path="/booking/:serviceId">
             <Booking> </Booking>
-          </Route>
+          </PrivetRoute>
 
           {/* -----------About route---------------- */}
           <Route exact path="/about">
@@ -51,9 +53,9 @@ function App() {
           </Route>
 
             {/* --------------Add Services---------------- */}
-          <Route exact path="/addServices"> 
+          <PrivetRoute exact path="/addServices">
             <AddService></AddService>
-          </Route>
+          </PrivetRoute>
 
 
 
@@ -71,7 +73,7 @@ function App() {
         <Footer></Footer>
       </Router>
 
-
+      </AuthProvider>
 
 
 

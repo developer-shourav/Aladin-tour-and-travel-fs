@@ -21,13 +21,11 @@ const Booking = () => {
     console.log(product);
 
 
-    const { register,
-        handleSubmit,
-        watch,
-        formState: { errors } } = useForm();
+    const { register, handleSubmit,reset, watch, formState: { errors } } = useForm();
 
     const onSubmit = data => {
         console.log(data);
+         reset();
 
     };
 
@@ -39,9 +37,9 @@ const Booking = () => {
              <div className='row container w-100 mx-auto'>
 
 
-            <div className='col-lg-8 mx-auto col-12 mt-5  px-3 py-2 py-lg-4 rounded'>
+            <div className='col-lg-8 mx-auto col-12   px-3 py-2 py-lg-4 rounded'>
                 <h1 className= 'ps-2 mb-3 fw-bold uppercase'>Package</h1>
-                <img src={product?.imageLink} className= 'w-75 card-style d-block  shadow-lg rounded' alt="" />
+                <img src={product?.imageLink} className= 'w-100 p-4  d-block  shadow-lg rounded' alt="" />
                 <br /><br />
                 <h2>{product?.name}</h2>
                 <h3 className= 'text-start line-color-booking'>********************</h3>
@@ -54,13 +52,26 @@ const Booking = () => {
                 <h3 className='text-center fw-bold'>Order This package</h3>
                 <img src="/orderForm.png" className=' w-100 text-center d-block px-5' alt="" />
                 <form onSubmit={handleSubmit(onSubmit)}>
-
                     <label>Name </label>
                     <input className='ps-1 py-2 w-100  my-1'
-                        placeholder='Name'
+                      
+                        required
+                        placeholder = "Enter Your Name"
+                        {...register("name")} />
+                    <br />
+                    <label>Email </label>
+                    <input className='ps-1 py-2 w-100  my-1'
+                        type = 'email'
+                        required
+                        placeholder="You Email"
+                        {...register("email")} />
+                    <br />
+
+                    <label>Name of your package</label>
+                    <input className='ps-1 py-2 w-100  my-1'
                         defaultValue = {product?.name}
                         required
-                       {...register("name")} />
+                       {...register("packageName")} />
                     <br />
 
                     <label>Description </label>
