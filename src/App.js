@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AboutUs from './components/AboutUs/AboutUs';
 import AddService from './components/AddService/AddService';
+import Booking from './components/Booking/Booking';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -31,8 +32,13 @@ function App() {
             <Home></Home>
           </Route>
           {/* -----------tours route---------------- */}
-          <Route exact path="/tours">
+          <Route exact path="/allServices">
             <Tours> </Tours>
+          </Route>
+
+          {/* -----------Booking route---------------- */}
+          <Route  path="/booking/:serviceId">
+            <Booking> </Booking>
           </Route>
 
           {/* -----------About route---------------- */}

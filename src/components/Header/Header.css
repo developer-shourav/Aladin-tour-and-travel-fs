@@ -97,9 +97,15 @@
                Cards style
 =================================================*/
 .card-style{
-    box-shadow: 1px 1px  4px #9e9d9d;
-    transition: all .5s ease;
+    box-shadow: 2px 2px  8px #9e9d9d;
+    transition: all .3s ease;
     border-radius: 5px;
+
+}
+
+.card-style:hover{
+   transform: scale(1.05);
+    
 }
 
 
@@ -117,6 +123,10 @@
     color: #f0ac00;
     text-shadow: 1px 1px black;
 }
+.line-color-booking{
+    color: #FF3F61;
+    text-shadow: 1px 1px black;
+}
 
 .submit-btn{
     color: #fff;
@@ -126,9 +136,22 @@
 
 .submit-btn:hover{
    
-    background-color: rgb(161, 117, 3);
+    background-color: #a17503;
    
 }
+
+.order-now-btn{
+    color: #fff;
+    background-color: #FF3F61;
+    border: none;
+}
+
+.order-now-btn:hover{
+   
+    background-color: #b82943;
+    
+}
+
 
 
 

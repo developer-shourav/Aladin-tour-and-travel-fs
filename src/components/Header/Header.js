@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+
 import "./Header.css";
 
 const Header = () => {
@@ -33,7 +34,7 @@ const Header = () => {
                                 </li>
 
                                 <li className="nav-item">
-                                    <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/tours"> Tours</NavLink>
+                                    <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/allServices"> Tours</NavLink>
                                 </li>
 
 

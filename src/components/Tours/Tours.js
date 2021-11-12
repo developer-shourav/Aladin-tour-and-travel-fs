@@ -5,7 +5,7 @@ import ServiceCart from '../ServiceCart/ServiceCart';
 const Tours = () => {
     const [tours, setTours] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:9000/tours")
+        fetch("http://localhost:9000/allServices")
             .then(res => res.json())
             .then(data => setTours(data))
 

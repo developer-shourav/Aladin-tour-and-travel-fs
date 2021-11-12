@@ -17,9 +17,9 @@ const LogIn = () => {
             <img src="/loginlogo.png" className = 'mx-auto d-block' alt="" />
             <form >
                {/* ------------Log in input style -------------- */}
-              <input className = " ps-1 py-2 w-100 my-1" type="email" name=""  id="" placeholder = "Your Email" />
+              <input className = " ps-1 py-2 w-100 my-1" type="email" placeholder = "Your Email" />
               <br />
-              <input className = " ps-1 py-2 mb-4 w-100 my-1" type="password" name="" id="" placeholder ="Password" /> 
+              <input className = " ps-1 py-2 mb-4 w-100 my-1" type="password" placeholder ="Password" /> 
               <br />
             <input className=" w-100 py-2 my-1 my-2 primery-btn rounded " type="submit" value="LOG IN" />
             </form>
