@@ -32,7 +32,7 @@ const AddService = () => {
 
 
                     <input className='ps-1 py-2 w-100  my-1'
-                        placeholder='Name'
+                        placeholder='Name of tour package'
                         required
                         defaultValue="" {...register("name")} />
                     <br />
@@ -63,7 +63,7 @@ const AddService = () => {
                         {...register("price", { required: true })} />
                     <br />
 
-
+                    <label> Class </label>
                     <select {...register("model", { required: true })} className='ps-1 py-2 w-100 my-1 '
                       
                         type='number'
@@ -84,6 +84,8 @@ const AddService = () => {
 
 
                     <button className='ps-1 py-2 rounded w-100 my-3 submit-btn' type = 'submit'> <i className="fas fa-plus"></i> ADD </button>
+
+                    
                 </form>
 
 

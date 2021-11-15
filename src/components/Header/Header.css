@@ -4,6 +4,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
 /* =============================================
          Site titel style
@@ -86,6 +87,7 @@
 .log-out-btn{
     margin-left: 10px;
     border: none ;
+    margin-top: -10px;
     padding: 5px;
     border-radius: 5px;
     background-color:#FF3F61 ;
@@ -120,11 +122,16 @@
 
 
 .slidr-label{
-      color: #daa520;
-      font-size: 25px; 
-      text-shadow: 1px 1px black;
+      color: #FF3F61;
+      font-size: 50px; 
+      text-shadow: 2px 2px black;
       font-weight: bold;
+      font-family: 'Parisienne', cursive;
       
+}
+
+.slidr-label-diff-color{
+    color: goldenrod;
 }
 
 .line-color{
@@ -166,6 +173,7 @@
 .navbar-color{
           background-color: #212529;
           
+          
 }
 
 .login-info{
@@ -178,4 +186,9 @@
     width: 50px;
     border-radius: 50%;
 
+}
+
+
+.slider-height{
+    max-height: 500px;
 }

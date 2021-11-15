@@ -12,6 +12,7 @@ import Home from './components/Home/Home';
 import LogIn from './components/LogIn/LogIn';
 import NotFound from './components/NotFound/NotFound';
 import Tours from './components/Tours/Tours';
+import MyOrders from './components/MyOrders/MyOrders';
 import AuthProvider from './context/AuthProvider';
 
 
@@ -39,9 +40,16 @@ function App() {
           </Route>
 
           {/* -----------Booking route---------------- */}
-          <PrivetRoute  path="/booking/:serviceId">
+          <PrivetRoute exact  path="/booking/:serviceId">
             <Booking> </Booking>
           </PrivetRoute>
+
+            {/* -----------Booking route---------------- */}
+            <PrivetRoute exact path="/myOrders">
+              <MyOrders> </MyOrders>
+            </PrivetRoute>
+
+
 
           {/* -----------About route---------------- */}
           <Route exact path="/about">
@@ -63,6 +71,8 @@ function App() {
           <Route exact path="/login">
             <LogIn></LogIn>
           </Route>
+
+          
           {/* -----------Unknown or error  route---------------- */}
           <Route path="*">
             <NotFound> </NotFound>

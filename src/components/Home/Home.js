@@ -33,31 +33,31 @@ const Home = () => {
 
                                 </div>
                                 <div className="carousel-inner">
-                                    <div className="carousel-item active">
-                                        <img src="./slider1.png" className="d-block w-100" alt="..." />
+                                    <div className="carousel-item slider-height active">
+                                        <img src="./banner1.jpg" className="d-block w-100" alt="..." />
                                         <div className="carousel-caption d-none d-md-block">
                                             <h2 className="slidr-label"> Go for a tour with our spicila guid  </h2>
 
                                         </div>
                                     </div>
-                                    <div className="carousel-item">
-                                        <img src="./slider2.png" className="d-block w-100" alt="..." />
-                                        <div className="carousel-caption d-none d-md-block">
-                                            <h2 className="slidr-label">Lost in nature</h2>
+                                    <div className="carousel-item slider-height">
+                                        <img src="./banner2.jpg" className="d-block w-100" alt="..." />
+                                        <div className="carousel-caption d-none d-md-block ">
+                                            <h2 className="slidr-label slidr-label-diff-color">Lost in nature</h2>
 
                                         </div>
                                     </div>
-                                    <div className="carousel-item">
-                                        <img src="./slider3.png" className="d-block w-100" alt="..." />
+                                    <div className="carousel-item slider-height">
+                                        <img src="./banner3.jpg" className="d-block w-100" alt="..." />
                                         <div className="carousel-caption d-none d-md-block">
                                             <h2 className="slidr-label">Our special Flight for you</h2>
 
                                         </div>
                                     </div>
-                                    <div className="carousel-item">
-                                        <img src="./slider4.png" className="d-block w-100" alt="..." />
+                                    <div className="carousel-item slider-height">
+                                        <img src="./banner4.jpg" className="d-block w-100" alt="..." />
                                         <div className="carousel-caption d-none d-md-block">
-                                            <h2 className="slidr-label"> Find the peace</h2>
+                                            <h2 className="slidr-label slidr-label-diff-color"> Find the peace</h2>
 
                                         </div>
                                     </div>

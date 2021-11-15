@@ -7,18 +7,22 @@ import "./LogIn.css";
 
 const LogIn = () => {
     
+  
+  
   const { signInUsingGoogle } = useAuth();
-  const location = useLocation()
+ 
+ /*  const location = useLocation()
   const history = useHistory();
   const redirect_uri = location.state?.from || "/home";
 
   const handleGoogleLogIn = () => {
+    
     signInUsingGoogle()
       .then(result => {
 
         history.push(redirect_uri);
       })
-  }
+  } */
    
 
   
@@ -40,12 +44,13 @@ const LogIn = () => {
             <div className="">----------------Or----------------</div>
             <button
               className="primery-btn rounded text-center w-100 px-4 py-2"
-              onClick={handleGoogleLogIn}
+              onClick={signInUsingGoogle}
 
             > <i className="fab fa-google"></i> Log In With google</button>
           </div>
           </div>
-          <div> <p className = 'text-center login-info mt-5'>[Note: Login with email and passwor is disabled for some moment .Please login with google.Thanks...] </p></div>
+          <div> <p className = 'text-center login-info mt-5'>[Note: Login with email and passwor is disabled for some moment .Please login with google.Thanks...] </p>
+          </div>
         </div>
     );
 };

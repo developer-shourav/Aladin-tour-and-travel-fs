@@ -11,25 +11,42 @@ const Booking = () => {
     const {serviceId} = useParams() ;
     const [product, setProduct] = useState({});
 
+    const email = sessionStorage.getItem("email");
+    
+
     useEffect(() => {
         fetch(`http://localhost:9000/singleProduct/${serviceId}`)
         .then(res => res.json())
         .then(data => setProduct(data))
     } ,[])
 
- 
-    console.log(product);
+  
 
+    const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
 
-    const { register, handleSubmit,reset, watch, formState: { errors } } = useForm();
+    const onSubmit = (data) => {
+            data.email = email
+        data.imageLink = product.imageLink;
 
-    const onSubmit = data => {
+        
+        fetch("http://localhost:9000/confirmOrder",{
+            method: "POST",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify(data),
+    
+        })
+        .then(res =>res.json())
+        .then(result=> console.log(result))
+        
         console.log(data);
-         reset();
+
+       alert("You book a package successfully")
+        reset();
+       
 
     };
 
-
+   
 
 
     return (
@@ -49,7 +66,7 @@ const Booking = () => {
                  </div>
 
                   <div className="col-lg-4  mx-auto col-12 card-style mt-5 px-3 py-2 py-lg-4 rounded ">
-                <h3 className='text-center fw-bold'>Order This package</h3>
+                <h3 className='text-center fw-bold'>Confirm This package</h3>
                 <img src="/orderForm.png" className=' w-100 text-center d-block px-5' alt="" />
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <label>Name </label>
@@ -60,12 +77,6 @@ const Booking = () => {
                         {...register("name")} />
                     <br />
                     <label>Email </label>
-                    <input className='ps-1 py-2 w-100  my-1'
-                        type = 'email'
-                        required
-                        placeholder="You Email"
-                        {...register("email")} />
-                    <br />
 
                     <label>Name of your package</label>
                     <input className='ps-1 py-2 w-100  my-1'
@@ -74,17 +85,26 @@ const Booking = () => {
                        {...register("packageName")} />
                     <br />
 
-                    <label>Description </label>
+                    <label>Some info about this tour </label>
                     <textarea className='ps-1 py-2 w-100 my-1 '
                         placeholder='Description'
                         defaultValue={product?.description}
                         type='text'
-                        {...register("description", { required: true })} />
+                        {...register("description")} />
                     <br />
+
+                    {/* <input className='ps-1 py-2 w-100 my-1 '
+                        placeholder='image url'
+                        defaultValue = {product?.imageLink}
+                        type='text'
+                        {...register("imageLink")} />
+                    <br /> */}
+
                     <label>Date you want to  travel </label>
                     
                     <input className='ps-1 py-2 w-100 my-1 '
                         type='date'
+                        required
                         {...register("date", { required: true })} />
                     <br />
 
@@ -116,8 +136,8 @@ const Booking = () => {
 
                     {errors.exampleRequired && <span>This field is required</span>}
 
-
                     <button className='ps-1 py-2 rounded w-100 my-3 order-now-btn ' type='submit'> <i className="fas fa-cart-plus"></i> Order Now </button>
+                    <p className = 'text-center'> <small>Please duble click the button for booking</small> </p>
                 </form>
 
 

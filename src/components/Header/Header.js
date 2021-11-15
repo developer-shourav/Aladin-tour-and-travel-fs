@@ -37,6 +37,12 @@ const Header = () => {
                                     <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/allServices"> Tours</NavLink>
                                 </li>
 
+                                
+
+                                {user?.email &&   <li className="nav-item">
+                                    <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/myOrders"> My Orders</NavLink>
+                                </li>}
+
 
                                 <li className="nav-item">
                                     <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/about"> About</NavLink>
@@ -48,22 +54,22 @@ const Header = () => {
 
                                 <li className="nav-item">
                                     <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/addServices"> Add New Service</NavLink>
-                                </li>
+                                </li> 
 
 
-                                {user.email && <li className="">
+                                {user?.email && <li className="">
                                     <span className="fs-6 fw-bold" >  <img className ='profile-photo-style' src={user.photoURL} alt="" /></span>
                                 </li>}
 
 
 
-                                {user.displayName && <li className="">
-                                    <span className="fs-6 fw-bold" style={{ color: "#ff3f62de" }}> <i className="fas fa-user"></i> {user.displayName}</span>
+                                {user?.displayName && <li className="">
+                                    <span className="fs-6 fw-bold" style={{ color: "#ff3f62de" }}> <i className="fas fa-user"></i> {user?.displayName}</span>
                                 </li>}
 
                                 <li className="nav-item">
                                     {
-                                        user.email ?
+                                        user?.email ?
                                             <button className="log-out-btn " onClick = {logOut}>Log out</button> : <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/login">Log In </NavLink>
                                     }
                                 </li>
