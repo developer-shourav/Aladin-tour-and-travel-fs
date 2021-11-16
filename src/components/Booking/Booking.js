@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import "./Booking" ;
 
 
@@ -15,7 +16,7 @@ const Booking = () => {
     
 
     useEffect(() => {
-        fetch(`http://localhost:9000/singleProduct/${serviceId}`)
+        fetch(`https://rocky-dawn-01056.herokuapp.com/singleProduct/${serviceId}`)
         .then(res => res.json())
         .then(data => setProduct(data))
     } ,[])
@@ -25,11 +26,14 @@ const Booking = () => {
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
 
     const onSubmit = (data) => {
-            data.email = email
+            data.email = email;
+            data.status = "pending";
         data.imageLink = product.imageLink;
+        data.price = product.price;
+        data.packageName = product.name;
 
         
-        fetch("http://localhost:9000/confirmOrder",{
+        fetch("https://rocky-dawn-01056.herokuapp.com/confirmOrder",{
             method: "POST",
             headers:{"content-type":"application/json"},
             body:JSON.stringify(data),
@@ -38,7 +42,7 @@ const Booking = () => {
         .then(res =>res.json())
         .then(result=> console.log(result))
         
-        console.log(data);
+       
 
        alert("You book a package successfully")
         reset();
@@ -60,9 +64,13 @@ const Booking = () => {
                 <br /><br />
                 <h2>{product?.name}</h2>
                 <h3 className= 'text-start line-color-booking'>********************</h3>
-                <h3>{product?.description} </h3>
-                <h5>Offer price : ${product?.price}</h5>
-                <h4 className='text-start line-color-booking'>------------------------</h4>
+                <h5>{product?.description} </h5>
+                <h4 className="fw-bold mt-2">Offer price : ${product?.price}</h4>
+                <h4 className='text-start line-color-booking mb-5'>------------------------</h4>
+                <Link to="/allServices" className="text-dark text-decoration-none mt-4 px-lg-5 py-lg-2 px-5 py-2 service-btn rounded  "><i className="  fas fa-arrow-left text-dark">  </i>   Go back   </Link> <div className="d-lg-none"> <br /> </div>
+
+                <Link to="/myOrders" className="text-dark text-decoration-none mt-4 px-lg-5 py-lg-2 px-4 py-2 ms-lg-5 service-btn rounded ">See Your all orders  <i className="fas fa-arrow-right text-dark"></i> </Link>
+                
                  </div>
 
                   <div className="col-lg-4  mx-auto col-12 card-style mt-5 px-3 py-2 py-lg-4 rounded ">
@@ -77,50 +85,53 @@ const Booking = () => {
                         {...register("name")} />
                     <br />
                     <label>Email </label>
+                    <input className='ps-1 py-2 w-100  my-1'
+
+                       defaultValue ={email}
+                        
+                        />
+                    <br />
+                    
 
                     <label>Name of your package</label>
                     <input className='ps-1 py-2 w-100  my-1'
-                        defaultValue = {product?.name}
                         required
-                       {...register("packageName")} />
+                        defaultValue = {product?.name}
+                        />
                     <br />
 
                     <label>Some info about this tour </label>
                     <textarea className='ps-1 py-2 w-100 my-1 '
                         placeholder='Description'
+                        required
                         defaultValue={product?.description}
                         type='text'
                         {...register("description")} />
                     <br />
 
-                    {/* <input className='ps-1 py-2 w-100 my-1 '
-                        placeholder='image url'
-                        defaultValue = {product?.imageLink}
-                        type='text'
-                        {...register("imageLink")} />
-                    <br /> */}
+        
 
                     <label>Date you want to  travel </label>
                     
                     <input className='ps-1 py-2 w-100 my-1 '
                         type='date'
                         required
-                        {...register("date", { required: true })} />
+                        {...register("date")} />
                     <br />
 
                     <label>Price of package($): </label>
                     <input className='ps-1 py-2 w-100 my-1 '
                         placeholder='Price'
+                        required
                         defaultValue={product?.price}
                         type='number'
-                        required
-                        {...register("price", { required: true })} />
+                         />
                     <br />
 
                     <label>Class </label>
-                    <select {...register("model", { required: true })} className='ps-1 py-2 w-100 my-1 '
+                    <select {...register("model")} className='ps-1 py-2 w-100 my-1 '
                         defaultValue={product?.model}
-                        type='number'
+                        type='text'
                         required
                     >
 
@@ -137,7 +148,7 @@ const Booking = () => {
                     {errors.exampleRequired && <span>This field is required</span>}
 
                     <button className='ps-1 py-2 rounded w-100 my-3 order-now-btn ' type='submit'> <i className="fas fa-cart-plus"></i> Order Now </button>
-                    <p className = 'text-center'> <small>Please duble click the button for booking</small> </p>
+                    <p className = 'text-center d-none'> <small>Please duble click the button for booking</small> </p>
                 </form>
 
 

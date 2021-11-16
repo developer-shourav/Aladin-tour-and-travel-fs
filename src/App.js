@@ -14,6 +14,7 @@ import NotFound from './components/NotFound/NotFound';
 import Tours from './components/Tours/Tours';
 import MyOrders from './components/MyOrders/MyOrders';
 import AuthProvider from './context/AuthProvider';
+import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
 
 
 function App() {
@@ -48,7 +49,12 @@ function App() {
             <PrivetRoute exact path="/myOrders">
               <MyOrders> </MyOrders>
             </PrivetRoute>
+      
 
+             {/* ----------manage orders-------------- */}
+            <Route exact path="/manageOrders">
+             <ManageAllOrders></ManageAllOrders>
+            </Route>
 
 
           {/* -----------About route---------------- */}

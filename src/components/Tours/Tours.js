@@ -5,7 +5,7 @@ import ServiceCart from '../ServiceCart/ServiceCart';
 const Tours = () => {
     const [tours, setTours] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:9000/allServices")
+        fetch("https://rocky-dawn-01056.herokuapp.com/allServices")
             .then(res => res.json())
             .then(data => setTours(data))
 

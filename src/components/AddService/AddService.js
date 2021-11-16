@@ -10,7 +10,7 @@ const AddService = () => {
            formState: { errors } } = useForm();
 
     const onSubmit = data =>{
-        fetch("http://localhost:9000/addServices", {
+        fetch("https://rocky-dawn-01056.herokuapp.com/addServices", {
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(data),
@@ -19,6 +19,7 @@ const AddService = () => {
         .then(result => console.log(result));
 
         reset();
+        alert("Add a new package successfully")
     };
 
     
@@ -26,7 +27,7 @@ const AddService = () => {
         <div className="d-flex justify-content-center align-items-center ">
             
             <div className = " card-style mt-5 px-3 py-2 py-lg-5 rounded ">
-                <h2 className = 'text-center fw-bold'>ADD A SERVICE</h2>
+                <h2 className = 'text-center fw-bold'>ADD A NEW PACKAGE</h2>
                 <img src="/addservice.png" className='mx-auto d-block px-5' alt="" />
                 <form onSubmit={handleSubmit(onSubmit)}>
 

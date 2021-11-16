@@ -34,13 +34,18 @@ const Header = () => {
                                 </li>
 
                                 <li className="nav-item">
-                                    <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/allServices"> Tours</NavLink>
+                                    <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/allServices"> All Packages</NavLink>
                                 </li>
 
                                 
 
                                 {user?.email &&   <li className="nav-item">
                                     <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/myOrders"> My Orders</NavLink>
+                                </li>}
+
+
+                                {user?.email && <li className="nav-item">
+                                    <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/manageOrders"> Manage Orders</NavLink>
                                 </li>}
 
 
@@ -52,9 +57,9 @@ const Header = () => {
                                     <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/contact"> Contact</NavLink>
                                 </li>
 
-                                <li className="nav-item">
-                                    <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/addServices"> Add New Service</NavLink>
-                                </li> 
+                               {user?.email && <li className="nav-item">
+                                    <NavLink activeStyle={activeStyle} className=" nav-items-style" to="/addServices"> Add New Package</NavLink>
+                                </li> }
 
 
                                 {user?.email && <li className="">

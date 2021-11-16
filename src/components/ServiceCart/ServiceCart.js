@@ -18,7 +18,7 @@ const ServiceCart = (props) => {
                         <p className="card-text"> {description} </p>
                         <h6 className=" fw-bold">Class: {model} </h6>
                         <h6 className=" fw-bold">Price:$ {price}</h6>
-                        <h6 className=" ">Traveling Time: {date} </h6>
+                        <h6 className=" ">Package avaiable from: {date} </h6>
                         <NavLink to={`/booking/${_id}`}> <button className=" mt-4 px-lg-5 py-lg-2 px-4 py-2 service-btn rounded ">Book Now</button></NavLink>
                     </div>
                 </div>
