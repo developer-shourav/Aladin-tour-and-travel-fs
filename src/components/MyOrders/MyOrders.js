@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react';
-
+import Swal from 'sweetalert2'
 
 
 
@@ -18,10 +18,17 @@ const MyOrders = () => {
          }, [constrol]);
 
      const handleDelete = (id) => {
-         const confirmation = confirm("Are you sure ,you cancel this order");
-       
-        if(confirmation){
-            fetch(`https://aladin-tour-and-travels-backend.vercel.app/deleteOrder/${id}`, {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "Are you sure ,you cancel this order?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`https://aladin-tour-and-travels-backend.vercel.app/deleteOrder/${id}`, {
                 method: "DELETE",
 
             })
@@ -31,7 +38,17 @@ const MyOrders = () => {
                         setControl(!constrol);
                     }
                 })
-        }
+              Swal.fire(
+                'Deleted!',
+                'Your order has been deleted.',
+                'success'
+              )
+            }
+          })
+       
+
+            
+  
         
          
      };
