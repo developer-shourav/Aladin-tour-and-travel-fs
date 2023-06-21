@@ -11,7 +11,7 @@ const MyOrders = () => {
      const [constrol, setControl] = useState(false);
 
          useEffect( () =>{
-             fetch(`https://rocky-dawn-01056.herokuapp.com/myOrders/${email}`)
+             fetch(`https://aladin-tour-and-travels-backend.vercel.app/myOrders/${email}`)
              .then(res => res.json())
                  .then(data => setServices(data));
 
@@ -21,7 +21,7 @@ const MyOrders = () => {
          const confirmation = confirm("Are you sure ,you cancel this order");
        
         if(confirmation){
-            fetch(`https://rocky-dawn-01056.herokuapp.com/deleteOrder/${id}`, {
+            fetch(`https://aladin-tour-and-travels-backend.vercel.app/deleteOrder/${id}`, {
                 method: "DELETE",
 
             })

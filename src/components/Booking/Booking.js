@@ -16,7 +16,7 @@ const Booking = () => {
     
 
     useEffect(() => {
-        fetch(`https://rocky-dawn-01056.herokuapp.com/singleProduct/${serviceId}`)
+        fetch(`https://aladin-tour-and-travels-backend.vercel.app/singleProduct/${serviceId}`)
         .then(res => res.json())
         .then(data => setProduct(data))
     } ,[])
@@ -33,7 +33,7 @@ const Booking = () => {
         data.packageName = product.name;
 
         
-        fetch("https://rocky-dawn-01056.herokuapp.com/confirmOrder",{
+        fetch("https://aladin-tour-and-travels-backend.vercel.app/confirmOrder",{
             method: "POST",
             headers:{"content-type":"application/json"},
             body:JSON.stringify(data),

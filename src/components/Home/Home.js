@@ -7,7 +7,7 @@ const Home = () => {
     const [features, setFeatures] = useState([]);
 
     useEffect(() => {
-        fetch('https://rocky-dawn-01056.herokuapp.com/allServices')
+        fetch('https://aladin-tour-and-travels-backend.vercel.app/allServices')
             .then(res => res.json())
             .then(data => setFeatures(data))
 

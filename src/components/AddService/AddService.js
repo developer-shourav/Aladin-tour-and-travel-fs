@@ -10,7 +10,7 @@ const AddService = () => {
            formState: { errors } } = useForm();
 
     const onSubmit = data =>{
-        fetch("https://rocky-dawn-01056.herokuapp.com/addServices", {
+        fetch("https://aladin-tour-and-travels-backend.vercel.app/addServices", {
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(data),

@@ -5,7 +5,7 @@ import ServiceCart from '../ServiceCart/ServiceCart';
 const Tours = () => {
     const [tours, setTours] = useState([]);
     useEffect(() => {
-        fetch("https://rocky-dawn-01056.herokuapp.com/allServices")
+        fetch("https://aladin-tour-and-travels-backend.vercel.app/allServices")
             .then(res => res.json())
             .then(data => setTours(data))
 
