@@ -36,13 +36,14 @@ const MyOrders = () => {
                 .then(data => {
                     if (data.deletedCount) {
                         setControl(!constrol);
+                        Swal.fire(
+                            'Deleted!',
+                            'Your order has been deleted.',
+                            'success'
+                          )
                     }
                 })
-              Swal.fire(
-                'Deleted!',
-                'Your order has been deleted.',
-                'success'
-              )
+              
             }
           })
        
