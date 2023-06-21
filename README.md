@@ -3,7 +3,6 @@
 Visite our websit to make a enjoyable journey [Aladin Tour and Travel](https://aladin-tour-and-travel-7dbec.web.app/) .
 
 
-Our backend server [Aladin Tour and Travel server](https://rocky-dawn-01056.herokuapp.com/) .
 
 ## What you do
 - We are one to the best Tour and Travel Agency
